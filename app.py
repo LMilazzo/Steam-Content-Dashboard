@@ -7,13 +7,13 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 #Util files
-import functions
-import UIfunctions
+import data_utils_
+import ui_utils_
 
 #== Global Stuff ==
 
 #Grab gamelist from steam for game ids 
-steam_ids = functions.steamIDListLoad()
+steam_ids = data_utils_.steamIDListLoad()
 
 #==== List of cursors that have been called so user can navigate backwards
 if 'cursorList' not in st.session_state:
@@ -46,14 +46,14 @@ with col1:
     # from a simple request
     with st.container(key="quickResults", height=180):
 
-       UIfunctions.trendingItems(st.session_state.search)
+       ui_utils_.trendingItems(st.session_state.search)
 
     # == Full Results ==========================================
     # A  complete list of all items from the steam store id list
     # that contain the searched substring
     with st.container(key="fullResults", height = 250):
         
-        UIfunctions.generateFullResults(st.session_state.search, steam_ids)
+        ui_utils_.generateFullResults(st.session_state.search, steam_ids)
 
 #-------------------------------------------------------------------------------------------------------------------------
 # ====== Main Panel Column ======================================
@@ -67,14 +67,14 @@ with col2:
             id = st.query_params.get("gID")
             id = str.split(id, ",")[0]
 
-            UIfunctions.generateMainPage(id)
+            ui_utils_.generateMainPage(id)
         
         else:
             
-            landing = functions.storeQuickResults("")
+            landing = data_utils_.storeQuickResults("")
 
             if landing:
                 id = landing[0].get('id')
-                UIfunctions.generateMainPage(str(id))
+                ui_utils_.generateMainPage(str(id))
             else:
-                UIfunctions.generateErrorPage()
+                ui_utils_.generateErrorPage()

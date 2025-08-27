@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 from datetime import datetime, timezone
 import pandas as pd
-import functions
+import data_utils_
 import base64
 
 #---------------------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ def trendingItems(search):
                 Trending: {search}
              </div>""")
 
-    quickResults = functions.storeQuickResults(search.lower())
+    quickResults = data_utils_.storeQuickResults(search.lower())
 
     if not quickResults:
         st.warning("No results found.")
@@ -73,7 +73,7 @@ def trendingItems(search):
 
 def activePlayerPlot(id, gameTitle):
 
-    playerCountData = functions.steamChartsDataFetch(id)
+    playerCountData = data_utils_.steamChartsDataFetch(id)
 
     #Check if the data is the correct type before trying to create plotly
     if playerCountData.empty:
@@ -205,7 +205,7 @@ def generateMainPage(id):
 
     # ====== Fetch Game Data ================================
     # Use the Steam ID to pull full information from the API
-    fetched = functions.steamIDSearch(id)
+    fetched = data_utils_.steamIDSearch(id)
 
     if fetched is None:
         generateErrorPage()
@@ -262,7 +262,7 @@ def typeGame(data, id):
     
     #====== Plotly =====================================================
     #===================================================================
-    
+
     # Player count information from Steam Charts
     
     activePlayerPlot(id, title)
@@ -478,7 +478,7 @@ def build_reviews_container_(id):
 
             with st.container():
                 
-                reviews, next_cursor = functions.getReview(id = id, cursor = st.session_state.cursor)
+                reviews, next_cursor = data_utils_.getReview(id = id, cursor = st.session_state.cursor)
 
                 if next_cursor not in st.session_state.cursorList:
                     st.session_state.cursorList.append(next_cursor)
@@ -511,7 +511,7 @@ def build_reviews_container_(id):
             back, forward = st.columns(2)
             with back:
                 with st.container(key="reviewButtonColumnPrev"):
-                    st.button(label = ":material/arrow_back:", key="prev", on_click=functions.prevCursor)
+                    st.button(label = ":material/arrow_back:", key="prev", on_click=data_utils_.prevCursor)
             with forward:
                 with st.container(key="reviewButtonColumnNext"):
-                    st.button(label = ":material/arrow_forward:", key="next", on_click=functions.nextCursor)
+                    st.button(label = ":material/arrow_forward:", key="next", on_click=data_utils_.nextCursor)
