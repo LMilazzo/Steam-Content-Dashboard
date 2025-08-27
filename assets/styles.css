@@ -1,0 +1,235 @@
+
+.st-key-quickResults {
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #262730;
+    padding: 20px;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 10px;
+    border: 2px solid #0077B6;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.st-key-fullResults {
+    overflow-x: hidden;
+    background-color: #262730;
+    padding: 20px;
+    display: flex;
+    white-space: nowrap;
+    border-radius: 10px;
+    border: 2px solid #0077B6;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.st-key-plotly {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #0077B6;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    float: left;
+}
+
+.st-key-search{
+    margin: 0;
+    padding: 0;
+}
+
+.Results-Button{
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    font-size: 10px;
+    display: flex; 
+    word-wrap: anywhere;
+    white-space: normal;
+    width: 100%;     
+    max-height: fit-content;
+    margin-bottom: 5px;
+    break-inside: avoid;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.Results-Button:hover{
+    border: 1px solid #cc6633;
+    color: #cc6633;
+    font-size: 12px;
+    padding: 3px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.masonry{
+    width: 100%;
+    margin: 0px auto;
+    columns: 2;
+    column-gap: 5px;
+    padding: 5px;
+    padding-top: 0;
+}
+
+.st-key-mainPanel{
+    border: 2px solid #0077b6;
+    border-radius: 10px;
+    overflow-y: auto;
+}
+
+.header{
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.header-image{
+    width: 48%;
+    border: 2px solid #0077b6;
+    border-radius: 5px;
+    margin-left: 2%;
+}
+
+.header-info{
+    width: 48%;
+    text-align: left;
+    margin-right: 2%;
+}
+
+.cat-tag{
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #262730;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 8px;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.gen-tag{
+    border: 1px solid #cc6633;
+    color: #cc6633;
+    border-radius: 10px;
+    background-color: #262730;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 8px;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.cat-tag-container{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-height: 95px;
+    overflow-y: auto;
+    padding-left: 15px;
+}
+
+.pubdev-tag{
+    border-radius: 10px;
+    background-color: #262730;
+    width: fit-content;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 10px;
+    font-weight: bold; 
+    color: #0077b6;
+    white-space: nowrap;
+    width: fit-content;
+    margin-right: 5px;
+}
+
+.st-key-searchbar{
+    background-color: #262730;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #0077B6;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.screenshot{
+    border: 0.5px solid black;
+    width: 95%;
+}
+
+.screenshot-container{
+    display: inline-flex;
+    white-space: nowrap;
+    width: 100%;
+    overflow: auto;
+    gap: 10px;
+    padding: 10px;
+}
+
+.screenshot-box{
+    border: 2px solid #0077b6;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 97%;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    margin-left: 2%;
+    float: right;
+}
+
+.review{
+    border: 1px solid #0077b6;
+    background: #0b0f17;
+    border-radius: 10px; 
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 15.5%;
+    padding: 5px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.review:hover{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: fit-content;
+    max-height: fit-content;
+    white-space: wrap;
+    color: #ab5a34;
+    
+}
+.st-key-reviewButtonColumnPrev{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.st-key-reviewButtonColumnNext{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.st-key-reviewBox{
+    border-radius: 10px;
+    padding: 5px;
+    height: 440px;
+    border:1px solid #ab5a34;
+    background: #1f2230;
+}
+.review-container{
+    gap: 10px;
+    height: 375px;
+    overflow: auto;
+}
