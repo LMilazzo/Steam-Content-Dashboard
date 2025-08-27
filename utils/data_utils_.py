@@ -42,7 +42,7 @@ def steamIDListRequest():
 #Loads the local id list
 def steamIDListLoad():
 
-    with open('appIDList.json', 'r', encoding='utf-8') as file:
+    with open('datasets/appIDList.json', 'r', encoding='utf-8') as file:
         df = pd.read_json(file)
         df = df.rename(columns={'appid': 'id', 'name': 'Title'})
         return df

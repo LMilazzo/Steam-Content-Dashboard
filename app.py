@@ -7,8 +7,7 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 #Util files
-import data_utils_
-import ui_utils_
+from utils import data_utils_ , ui_utils_
 
 #== Global Stuff ==
 
