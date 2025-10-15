@@ -37,7 +37,7 @@ with col1:
     # search bar to search and retrieve options for games to view
     with st.container(key="searchbar", height = 90):
         st.html("<div style ='padding: 0; margin: 0; text-align: center; padding: 0; font-size: 16px;'> Search </div>")
-        st.text_input(label = "", key="search", placeholder="Enter game name here...", label_visibility="collapsed")
+        st.text_input(label = "search", key="search", placeholder="Enter game name here...", label_visibility="collapsed")
         st.markdown("<style> input {font-size: 12px !important} </style> ", unsafe_allow_html=True,)
         
     # == Quick Results / Trending items==========================================

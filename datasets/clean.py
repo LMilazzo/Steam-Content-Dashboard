@@ -2,6 +2,7 @@
 import os
 import pandas as pd
 
+# https://www.kaggle.com/datasets/nikdavis/steam-store-games?resource=download
 
 with open('Project/datasets/steam.csv', 'r', encoding='utf-8') as file:
 
