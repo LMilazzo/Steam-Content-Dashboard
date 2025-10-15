@@ -53,6 +53,7 @@ with col1:
     with st.container(key="fullResults", height = 250):
         
         ui_utils_.generateFullResults(st.session_state.search, steam_ids)
+        st.html("<p>Available data does not contain all games sorry... &#128577; </p>")
 
 #-------------------------------------------------------------------------------------------------------------------------
 # ====== Main Panel Column ======================================

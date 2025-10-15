@@ -83,7 +83,7 @@ def getReview(id: str, cursor: str = "*") -> tuple[list, str]:
             rev = page.get('reviews', [])
             c = page.get('cursor', None)
 
-        return rev, c
+            return rev, c
     
     except requests.exceptions.RequestException as e:
         return None, None
